@@ -63,6 +63,13 @@ const configuration: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
         test: /\.css$/,
         include: [webpackPaths.srcRendererPath],
         use: ['style-loader', 'css-loader', 'postcss-loader'],
