@@ -19,7 +19,7 @@ import ModeSwitch from './components/ModeSwitch';
 import './App.css';
 import { CodeContextProvider, useCodeContext } from './hooks/useCodeContext';
 
-const addStyle = (content) => {
+const addStyle = (content: any) => {
   const style = document.createElement('style');
   style.innerHTML = content;
   style.id = 'css';
@@ -84,7 +84,7 @@ function Block() {
   }, [style]);
   return (
     <>
-      <div className="navbar  fixed">
+      <div className="navbar fixed top-0">
         <div className="navbar-start"></div>
         <div className="navbar-center"></div>
         <div className="navbar-end">
@@ -105,7 +105,7 @@ function Block() {
         <div className="navbar-center">
           <SelectLanguage
             selectedLanguage={selectedLanguage}
-            handleLanguageChange={(ev) => {
+            handleLanguageChange={(ev: any) => {
               setSelectedLanguage(ev.target.value);
             }}
           />

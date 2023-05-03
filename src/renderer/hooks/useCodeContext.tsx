@@ -1,16 +1,12 @@
 import { createContext, useContext, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
 
 type CodeContextType = {
   code: string;
-  selectedStyle: string;
   selectedLanguage: string;
   fontSize: string;
   setCode: (code: string) => void;
-  setSelectedStyle: (style: string) => void;
   setSelectedLanguage: (language: string) => void;
   setFontSize: (size: string) => void;
-  navigate: typeof useNavigate;
 };
 
 const CodeContext = createContext<CodeContextType | undefined>(undefined);
