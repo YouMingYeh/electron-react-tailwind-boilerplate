@@ -7,16 +7,22 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
-
+#root {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @layer base {
   body {
-    @apply bg-base-100;
+    @apply bg-base-100 w-screen;
   }
 }
 
 @layer components {
   .navbar {
-    @apply rounded-lg;
+    @apply rounded-lg w-screen;
   }
 }

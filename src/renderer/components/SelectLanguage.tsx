@@ -4,7 +4,7 @@ export default function SelectLanguage({
 }) {
   return (
     <select
-      className="select tex-xl"
+      className="select text-xl select-bordered"
       value={selectedLanguage}
       onChange={handleLanguageChange}
     >

@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
 export default function SelectStyle({ selectedStyle, handleStyleChange }) {
+  const options = [
+    'prism-a11y-dark',
+    'prism-base16-ateliersulphurpool',
+    'prism-atom-dark',
+    'prism-cb',
+    'prism-coldark-cold',
+    'prism-coldark-dark',
+    'prism-coy-without-shadows',
+    'prism-darcula',
+    'prism-dracula',
+    'prism-duotone-dark',
+  ];
+
   return (
     <select
-      className="select text-xl"
+      className="select-bordered select text-xl"
       value={selectedStyle}
       onChange={handleStyleChange}
     >
-      <option value="prism-a11y-dark">prism-a11y-dark</option>
-      <option value="prism-base16-ateliersulphurpool.light">
-        prism-base16-ateliersulphurpool.light
-      </option>
+      {options.map((opt) => {
+        return <option value={opt}>{opt}</option>;
+      })}
     </select>
   );
 }
